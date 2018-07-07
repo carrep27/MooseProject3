@@ -60,7 +60,7 @@ def Analysis():
     y_train_scaled = y_scaler.transform(y_train)
     y_test_scaled = y_scaler.transform(y_test)
     from sklearn.svm import SVC
-    model = SVC(kernel="linear")
+    model = SVC(kernel="rbf")
     model.fit(X_train_scaled, y_train_scaled.astype(int))
    
     # from sklearn.metrics import mean_squared_error
